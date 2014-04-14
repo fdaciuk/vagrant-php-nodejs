@@ -28,7 +28,12 @@ Em `/puphpet/config.yaml`, edite o seguinte:
 
 * `private_network:` IP para sua VM
 * `synced_folder:` diretório `Projects` deve estar ao lado do arquivo `Vagrantfile`.
-* Para criar virtual hosts, edite `vhosts`, copiando a configuração de `localhost`, dando um nome diferente para ele. Em `servernme` é o domínio do seu vhost e `docroot` é o caminho do diretório que será usado ao acessar o seu `servername`.
+
+### Virtual Hosts
+Para criar virtual hosts, edite `vhosts`, copiando a configuração de `localhost`, dando um nome diferente para ele.
+Em `servernme` é o domínio do seu vhost e `docroot` é o caminho do diretório que será usado ao acessar o seu `servername`.
+
+Não esqueça de adicionar ao seu `/etc/hosts` o seu virtual host, linkando para o IP setado em `private_network`, para que você possa acessar localmente o que estiver na máquina virtual.
 
 ## Executar
 
