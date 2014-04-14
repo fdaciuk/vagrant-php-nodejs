@@ -1,6 +1,6 @@
 # Vagrant com [PuPHPet](https://puphpet.com/)
 
-> Para mudar essa configuração, arraste o arquivo `/puphpet/config.yaml` na página `https://puphpet.com/`, edite as conforme a sua necessidade e baixe o novo arquivo.
+> Para mudar essa configuração, arraste o arquivo `/puphpet/config.yaml` na página `https://puphpet.com/`, edite conforme a sua necessidade e baixe o novo arquivo.
 
 ## Softwares instalados
 
