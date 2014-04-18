@@ -176,9 +176,6 @@ hosts='/etc/hosts'
 # Arquivo ~/.bashrc
 bashrc='/home/$USER/.bashrc'
 
-# WP-CLI Bash completions
-source '/home/fernando/.wp-cli/vendor/wp-cli/wp-cli/utils/wp-completion.bash'
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
