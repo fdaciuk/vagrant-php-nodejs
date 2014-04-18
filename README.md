@@ -2,6 +2,27 @@
 
 > Para mudar essa configuração, arraste o arquivo `/puphpet/config.yaml` na página `https://puphpet.com/`, edite conforme a sua necessidade e baixe o novo arquivo.
 
+## Adições manuais
+
+Se você fizer o passo acima e baixar a nova configuração do **PuPHPet**, vai precisar adicionar manualmente:
+**No arquivo `Vagrantfile`, na linha `33`, substitua:**
+```ruby
+config.vm.synced_folder "#{folder['source']}", "#{folder['target']}", id: "#{folder['id']}", type: nfs
+```
+
+por:
+```ruby
+config.vm.synced_folder "#{folder['source']}", "#{folder['target']}", id: "#{folder['id']}", type: nfs, owner: "#{folder['owner']}", group: "#{folder['group']}"
+```
+
+**E no arquivo `puphpet/config.yaml`, procure pela entrada `synced_folder` e adicione abaixo de `nfs: 'false'` (respeitando a indentação):**
+```yaml
+owner: vagrant
+group: www-data
+```
+
+Isso vai evitar problemas de permissão ao trabalhar com *Apache*.
+
 ## Softwares instalados
 
 ### Sistema
