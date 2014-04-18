@@ -5,7 +5,7 @@
 ## Adições manuais
 
 Se você fizer o passo acima e baixar a nova configuração do **PuPHPet**, vai precisar adicionar manualmente:
-**No arquivo `Vagrantfile`, na linha `33`, substitua:**
+No arquivo `Vagrantfile`, na linha `33`, substitua:
 ```ruby
 config.vm.synced_folder "#{folder['source']}", "#{folder['target']}", id: "#{folder['id']}", type: nfs
 ```
@@ -15,7 +15,7 @@ por:
 config.vm.synced_folder "#{folder['source']}", "#{folder['target']}", id: "#{folder['id']}", type: nfs, owner: "#{folder['owner']}", group: "#{folder['group']}"
 ```
 
-**E no arquivo `puphpet/config.yaml`, procure pela entrada `synced_folder` e adicione abaixo de `nfs: 'false'` (respeitando a indentação):**
+E no arquivo `puphpet/config.yaml`, procure pela entrada `synced_folder` e adicione abaixo de `nfs: 'false'` (respeitando a indentação):
 ```yaml
 owner: vagrant
 group: www-data
@@ -23,18 +23,30 @@ group: www-data
 
 Isso vai evitar problemas de permissão ao trabalhar com *Apache*.
 
+### dotfiles
+
+Não esqueça de adicionar também os arquivos `.bashrc`, `.gitconfig` e `.vimrc` em `puphpet/files/dot`.
+
 ## Softwares instalados
 
 ### Sistema
-* Ubuntu 12.04
+* Ubuntu 12.04 32bits
 * Autojump
 * Git
 * Vim
 
 ### PHP
 * PHP 5.4
-* MySQL
 * PHPMyAdmin
+* Composer
+
+### Módulos Apache
+* PHP
+* Rewrite
+
+### Bancos de dados
+* MySQL
+* MongoDB
 
 ### NodeJS
 * NodeJS
@@ -42,6 +54,9 @@ Isso vai evitar problemas de permissão ao trabalhar com *Apache*.
 * GruntJS
 * Hexo
 * Express
+
+### Outros softwares
+* Elastic Search
 
 ## Configuração
 
@@ -55,6 +70,11 @@ Para criar virtual hosts, edite `vhosts`, copiando a configuração de `localhos
 Em `servernme` é o domínio do seu vhost e `docroot` é o caminho do diretório que será usado ao acessar o seu `servername`.
 
 Não esqueça de adicionar ao seu `/etc/hosts` o seu virtual host, linkando para o IP setado em `private_network`, para que você possa acessar localmente o que estiver na máquina virtual.
+
+
+### dotfiles
+
+Edite o arquivo `.gitconfig` em `puphpet/files/dot`, adicionando seu nome e e-mail.
 
 ## Executar
 
