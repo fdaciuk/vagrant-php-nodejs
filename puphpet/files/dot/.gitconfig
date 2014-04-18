@@ -1,0 +1,9 @@
+[user]
+	email = f.daciuk@gmail.com
+	name = Fernando Daciuk
+[color]
+	ui = true
+[merge]
+	tool = vim
+[core]
+	editor = vim

@@ -44,4 +44,6 @@ Os arquivos no seu ambiente local ficam em `Projects`, e no Vagrant, em `/var/ww
 Para acessar a máquina, basta rodar `vagrant ssh`
 
 > TODO:
-> * Adicionar à configuração padrão para o Vagrant instalar automaticamente o `vagrant-notify`. Hoje é necessário rodar `vagrant plugin install vagrant-notify`
+> * Adicionar à configuração padrão do Vagrant:
+>   * para o Vagrant instalar automaticamente o `vagrant-notify`, hoje é necessário rodar `vagrant plugin install vagrant-notify`
+>   * atualizar  VirtualBox Guest Additions: `vagrant plugin install vagrant-vbguest`
