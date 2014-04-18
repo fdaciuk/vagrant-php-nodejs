@@ -1,2 +1,1 @@
-sudo npm i -g gulp grunt-cli hexo express-generator
-
+sudo npm i -g gulp grunt-cli hexo express-generator nodemon

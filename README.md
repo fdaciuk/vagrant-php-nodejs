@@ -54,6 +54,7 @@ Não esqueça de adicionar também os arquivos `.bashrc`, `.gitconfig` e `.vimrc
 * GruntJS
 * Hexo
 * Express
+* Nodemon
 
 ### Outros softwares
 * Elastic Search
