@@ -182,6 +182,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Para o Autojump funcionar no Ubuntu 12.04
 export PROMPT_COMMAND=$PROMPT_COMMAND"; history -a; history -n;"
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
 pyserver() {
   python -m SimpleHTTPServer 9001
 }

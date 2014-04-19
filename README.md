@@ -21,7 +21,9 @@ owner: vagrant
 group: www-data
 ```
 
-Isso vai evitar problemas de permissão ao trabalhar com *Apache*.
+Troque também o usuário padrão do `Apache` para `vagrant`.
+
+Isso vai evitar problemas de permissão ao trabalhar com *PHP + Apache*.
 
 ### dotfiles
 
