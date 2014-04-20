@@ -91,3 +91,4 @@ Para acessar a máquina, basta rodar `vagrant ssh`
 > * Adicionar à configuração padrão do Vagrant:
 >   * para o Vagrant instalar automaticamente o `vagrant-notify`, hoje é necessário rodar `vagrant plugin install vagrant-notify`
 >   * atualizar  VirtualBox Guest Additions: `vagrant plugin install vagrant-vbguest`
+> * Verificar como instalar ZSH ou resolver problemas de permissão
